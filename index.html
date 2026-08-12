@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connected Tabs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Connected Tabs Example</h1>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTab(1)">Step 1</button>
+        <button class="tab-btn" onclick="showTab(2)">Step 2</button>
+        <button class="tab-btn" onclick="showTab(3)">Step 3</button>
+    </div>
+
+    <!-- Tab 1 -->
+
+    <div class="tab-content active" id="tab1">
+        <h2>Enter Details</h2>
+        <input type="text" id="name" placeholder="Enter Name">
+        <textarea id="message" placeholder="Enter Message"></textarea>
+        <button onclick="sendToStep2()">Send →</button>
+    </div>
+
+    <!-- Tab 2 -->
+
+    <div class="tab-content" id="tab2">
+        <h2>Received Data</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Message:</strong></p>
+        <div class="box" id="displayMessage"></div>
+        <button onclick="sendToStep3()">Next →</button>
+    </div>
+
+    <!-- Tab 3 -->
+
+    <div class="tab-content" id="tab3">
+        <h2>Final Output</h2>
+        <div class="finalBox" id="finalOutput"></div>
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
